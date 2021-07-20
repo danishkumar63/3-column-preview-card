@@ -1,0 +1,149 @@
+:root {
+
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Transparent white (paragraphs):  */
+    --white: hsla(0, 0%, 100%, 0.75);
+
+    /* Very light gray (background, headings, buttons) */
+    --very-light-gray: hsl(0, 0%, 95%);
+
+    --font-1: 'Big Shoulders Display', cursive;
+    --font-2: 'Lexend Deca', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+}
+
+.card-column {
+    width: 30rem;
+    background-color: var(--dark-cyan);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 900px) {
+    .card-column {
+        width: auto;
+        max-width: 50rem;
+    }
+}
+
+.card-column:first-child {
+    background-color: var(--bright-orange);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.card-column:last-child {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 1rem 1rem 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .card-column:first-child {
+        border-radius: 1rem 1rem 0 0;
+    }
+    
+    .card-column:last-child {
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
+.card-icon {
+    width: 6rem;
+}
+
+h2.card-title {
+    font-family: var(--font-1);
+    color: var(--very-light-gray);
+    padding: 3rem 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+p.card-text {
+    font-family: var(--font-2);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+}
+
+.btn-wrapper {
+    padding: 2rem 0;
+    padding-top: 10rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .btn-wrapper {
+        padding-top: 4rem;
+    }
+}
+
+
+.btn,
+.btn:active {
+    border: 2px solid var(--very-light-gray);
+    outline: none;
+    cursor: pointer;
+    background-color: var(--very-light-gray);
+    font-family: var(--font-2);
+    padding: 1.5rem 3rem;
+    border-radius: 3rem;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--very-light-gray);
+}
+
+
+.btn-1 {
+    color: var(--bright-orange);
+}
+
+.btn-2 {
+    color: var(--dark-cyan);
+}
+
+.btn-3 {
+    color: var(--very-dark-cyan);
+}
+
+
+
+.attribution { padding: 2rem; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
